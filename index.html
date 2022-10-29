@@ -10,23 +10,62 @@
 
 <!-- <p>How to take user Input in HTML arithmatic Calculator</p> -->
 
-<body>
-    <h1>Taking Input From User</h1>
 
-    <form onsubmit="doSum(); return false">
-        Num1: <input type="number" id = "num1">
+<body>
+   <h1>Calculator</h1>
+
+        <form onsubmit="dosum(); return false">
+       num1 <input type="number" id = "num1">
         <br>
-        Num2: <input type="number" id = "num2">
+        num2 <input type="number" id = "num2">
         <br>
 
         <button type= "submit">Do Sum</button>
     </form>
 
-    <h1 id="result">  </h1>
+    <h2 id="result">  </h2>
+    <hr>
+
+
+    <form onsubmit="dodifference(); return false">
+    num3 <input type="number" id = "num3">
+    <br>
+    num4 <input type="number" id = "num4">
+    <br>
+
+    <button type= "submit">Do Difference</button>
+</form>
+
+<h3 id="result1">   </h3>
+<hr>
+
+    <form onsubmit="doproduct(); return false">
+    num5 <input type="number" id = "num5">
+    <br>
+    num6 <input type="number" id = "num6">
+    <br>
+
+    <button type= "submit">Do Product</button>
+</form>
+
+<h4 id="result2">  </h4>
+<hr>
+
+    <form onsubmit="dodivision(); return false">
+    num7 <input type="number" id = "num7">
+    <br>
+    num8 <input type="number" id = "num8">
+    <br>
+
+    <button type= "submit">Do Division</button>
+</form>
+
+<h5 id="result3">  </h5>
+<hr>
 
     <script>
 
-        function doSum() {
+        function dosum() {
             
             console.log ("I am doSum function running");
 
@@ -41,6 +80,57 @@
             console.log("sumResult is " + sumResult);
 
             document.getElementById("result").innerHTML = sumResult;
+
+        }
+
+        function dodifference () {
+            console.log ("I am dodifference function running");
+
+            let num3 = document.getElementById("num3").value;
+            let num4 = document.getElementById("num4").value;
+
+            num3= Number(num3);
+            num4= Number(num4);
+
+            let differenceResult = num3 - num4;
+
+            console.log("differenceResult is " + differenceResult);
+
+            document.getElementById("result1").innerHTML = differenceResult;
+
+        }
+        function doproduct () {
+            console.log ("I am doproduct function running");
+
+            let num5 = document.getElementById("num5").value;
+            let num6 = document.getElementById("num6").value;
+
+            num5= Number(num5);
+            num6= Number(num6);
+
+            let productResult = num5 * num6;
+
+            console.log("productResult is " + productResult);
+
+            document.getElementById("result2").innerHTML = productResult;
+
+        }
+
+        function dodivision () {
+            console.log ("I am dodivision function running");
+
+            let num7 = document.getElementById("num7").value;
+            let num8 = document.getElementById("num8").value;
+
+            num7= Number(num7);
+            num8= Number(num8);
+
+            let divisionResult = num7 / num8;
+
+            console.log("divisionResult is " + divisionResult);
+
+            document.getElementById("result3").innerHTML = divisionResult;
+
         }
     </script>
     </body>
